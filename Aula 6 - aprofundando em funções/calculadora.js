@@ -1,3 +1,72 @@
+
+// criando uma calculadora
+function calculadora() {
+
+    // definindo as operações e pegando valor de entrada do usuário
+    // usamos "\n" para fazer uma quebra de linha
+    const operacao = prompt('Escolha uma operação:\n + - Soma\n - - Subtração\n * - Multiplicação\n / - Divisão real\n % - Divisão inteira\n ** - Potenciação');
+
+    // Tratamento de entrada inválida para operacao
+    if (!['+', '-', '*', '/', '%', '**'].includes(operacao)) {
+        alert('Erro - Operação inválida.');
+        calculadora();
+        return;
+    }
+
+    let n1 = Number(prompt('Insira o primeiro valor:'));
+    if (isNaN(n1)) {
+        alert('Erro - Insira um valor numérico válido.');
+        calculadora();
+        return;
+    }
+
+    let n2 = Number(prompt('Insira o segundo valor:'));
+    if (isNaN(n2)) {
+        alert('Erro - Insira um valor numérico válido.');
+        calculadora();
+        return;
+    }
+
+    // ... (restante do código, incluindo definições de funções de operações, novaOperacao e escolha da operação)
+
+    // Escolhendo operação
+    switch (operacao) {
+        case '+':
+            soma();
+            break;
+        case '-':
+            subtracao();
+            break;
+        case '*':
+            multiplicacao();
+            break;
+        case '/':
+            divisaoReal();
+            break;
+        case '%':
+            divisaoInteira();
+            break;
+        case '**':
+            potenciacao();
+            break;
+        default:
+            alert('Erro - Operação inválida.');
+            calculadora();
+    }
+}
+
+calculadora();
+
+
+
+
+
+
+
+
+
+
+/* Dio-aula!!!*/
 /* // criando uma calculadora
 function calculadora() {
 
